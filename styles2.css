@@ -1,0 +1,103 @@
+.devbody {
+    background-color: rgb(233, 233, 233);
+}
+
+#devtoolsdiv{
+    text-align:center;
+    font-family: 'gintoNorm1';
+    margin-top: 5%;
+}
+
+#devtools span{
+    font-weight: 40;
+}
+
+#passform{
+    margin-top: 2%;
+}
+
+#passinput{
+    width: 10%;
+    height: 30px;
+    font-size: 110%;
+    background-color: rgb(207, 207, 207);
+    margin-top: 0.5%;
+    border-radius: 24px;
+    outline: none;
+    border: 0;
+    text-indent: 10px;
+    font-family: 'gintoNorm1';
+}
+
+.passbutton{
+    height: 30px;
+    width: 4%;
+    font-family: 'gintoNorm1';
+    background-color: rgb(124, 124, 124);
+    outline: none;
+    border: 0;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+}
+
+#invisible{
+    color: rgb(255, 80, 80);
+    text-align: center;
+}
+
+.hide{
+    display:none;
+}
+.show{
+    display:block;
+}
+
+.portbutton{
+    font-size: 300%;
+    padding: 2%;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 50%;
+    border:0;
+    border-radius: 30px;
+    border-width: 5px;
+    outline: 0;
+    cursor: pointer;
+    font-family: 'gintoNorm1';
+    background-color: rgb(53, 53, 53);
+    color:rgb(255, 255, 255);
+    background-image: url(img/gradient.png);
+    transition: 0.3s;
+}
+.portbutton:hover{
+    width: 55%;
+    color: black;
+    transition: 0.3s;
+}
+.portbuttondiv{
+    text-align: center;
+}
+#tvdiv{
+    background-image: url(img/tvprod2.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+}
+#editdiv{
+    background-image: url(img/editing.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+}
+#moddiv{
+    background-image: url(img/modbackground.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size:cover;
+}
