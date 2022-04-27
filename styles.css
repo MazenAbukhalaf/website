@@ -357,7 +357,7 @@ iframe{
     
 }
 .fa {
-    padding: 10px;
+    padding: 8px;
     font-size: 30px;
     width: 16px;
     text-align: center;
@@ -380,6 +380,12 @@ iframe{
 .fa-imdb {
     background:rgb(58, 58, 58);
     color: rgb(230, 226, 3);
+    text-decoration: none;
+    border-radius: 50%;
+}
+.fa-github {
+    background:rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 50%;
 }
