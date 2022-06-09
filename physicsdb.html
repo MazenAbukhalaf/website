@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Nanum+Gothic:wght@400;800&family=Work+Sans:wght@100&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+    </style>
+    <title>Physics Database | Mazen Abukhalaf</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="stylesdb.css">
+    <script>
+        $(document).ready(function() {
+            $("#formulasearch").click(function() {
+          
+                var x = document.getElementById("formulainput");
+                document.getElementById("formulareturn").innerHTML = x.value;
+            });
+            document.getElementById("exponentbutton").addEventListener("click", () =>{
+                document.getElementById("formulainput").value += "²";
+            });
+            document.getElementById("lambdabutton").addEventListener("click", () =>{
+                document.getElementById("formulainput").value += "λ";
+            });
+            document.getElementById("omegabutton").addEventListener("click", () =>{
+                document.getElementById("formulainput").value += "Ω";
+            });
+            document.getElementById("deltabutton").addEventListener("click", () =>{
+                document.getElementById("formulainput").value += "Δ";
+            });
+            document.getElementById("thetabutton").addEventListener("click", () =>{
+                document.getElementById("formulainput").value += "θ";
+            });
+            document.getElementById("pibutton").addEventListener("click", () =>{
+                document.getElementById("formulainput").value += "π";
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="pagecontent">
+        <div id="header">
+            <div id="align1">
+                <div id="titlecontent">
+                    <h1 id="pagetitle">Phys<span>DB</span></h1>
+                    <h5 id="pagetitle2">Created by Mazen Abukhalaf</h5>
+                </div>
+            </div>
+        </div>
+        <input spellcheck="false" type="text" id="formulainput" placeholder="Type your formula...">
+        <div class="flex-parent jc-center">
+            <button class="specchar" id="exponentbutton">x²</button>
+            <button class="specchar" id="lambdabutton">λ</button>
+            <button class="specchar" id="omegabutton">Ω</button>
+            <button class="specchar" id="deltabutton">Δ</button>
+            <button class="specchar" id="thetabutton">θ</button>
+            <button class="specchar" id="pibutton">π</button>
+        </div>
+        <button id="formulasearch">Search</button>
+        <div id="resultdiv">
+            <h2 id="formulareturn"><span>Your formula will appear here.</span></h2>
+            <p id="formulainforeturn">Information about your fomula will appear here.</p>
+        </div>
+        <div class="textbox">
+            <h1><u>What is <span>PhysDB</span>?</u></h1>
+            <h2><span>PhysDB</span> is a mini-database of basic physics formulas. </h2>
+        </div>
+    </div>
+    <script src="scriptdb.js"></script>
+    <script src="database.js"></script>
+</body>
+</html>
