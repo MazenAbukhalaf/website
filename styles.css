@@ -515,3 +515,54 @@ hr {
     margin-bottom: 0px;
     padding-bottom: 0px;
 }
+.selfimg{
+    max-width: 400px;
+}
+.textcol{
+    max-width: 600px;
+}
+#abouttextcol{
+    max-width: 800px;
+}
+.textcol2{
+    max-width: 600px;
+}
+.textcol3{
+    max-width: 600px;
+}
+#offlinebutton{
+    background-image: linear-gradient(to right, #303030,#141414);
+}
+
+
+.item1 { grid-area: header; }
+.item2 { grid-area: menu; }
+.item3 { grid-area: main; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu menu main main main';
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-container > div {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.item2 span{
+    font-size: 70%;
+}
+.item2 b{
+    font-weight: 400;
+}
+.item3 span{
+    font-size: 70%;
+}
+.item3 b{
+    font-weight: 400;
+}
