@@ -7,36 +7,68 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&family=Nanum+Gothic:wght@400;800&family=Work+Sans:wght@100&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+        * {
+          box-sizing: border-box;
+        }
+        
+        #input1 {
+          background-image: url('/css/searchicon.png');
+          background-position: 10px 12px;
+          background-repeat: no-repeat;
+          width: 100%;
+          font-size: 16px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid #ddd;
+          margin-bottom: 12px;
+        }
+        
+        #myUL {
+          list-style-type: none;
+          padding: 0;
+          margin: 0;
+          display: none;
+        }
+        
+        #myUL li a {
+          border: 1px solid #ddd;
+          margin-top: -1px; /* Prevent double borders */
+          background-color: #f6f6f6;
+          padding: 12px;
+          text-decoration: none;
+          font-size: 18px;
+          color: black;
+          display: block;
+        }
+        
+        #myUL li a:hover:not(.header) {
+          background-color: #eee;
+        }
     </style>
     <title>Physics Database | Mazen Abukhalaf</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="stylesdb.css">
     <script>
-        $(document).ready(function() {
-            $("#formulasearch").click(function() {
-          
-                var x = document.getElementById("formulainput");
-                document.getElementById("formulareturn").innerHTML = x.value;
-            });
-            document.getElementById("exponentbutton").addEventListener("click", () =>{
-                document.getElementById("formulainput").value += "²";
-            });
-            document.getElementById("lambdabutton").addEventListener("click", () =>{
-                document.getElementById("formulainput").value += "λ";
-            });
-            document.getElementById("omegabutton").addEventListener("click", () =>{
-                document.getElementById("formulainput").value += "Ω";
-            });
-            document.getElementById("deltabutton").addEventListener("click", () =>{
-                document.getElementById("formulainput").value += "Δ";
-            });
-            document.getElementById("thetabutton").addEventListener("click", () =>{
-                document.getElementById("formulainput").value += "θ";
-            });
-            document.getElementById("pibutton").addEventListener("click", () =>{
-                document.getElementById("formulainput").value += "π";
-            });
-        });
+        function myFunction() {
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("input1");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("myUL");
+        li = ul.getElementsByTagName("li");
+        for (i = 0; i < li.length; i++) {
+            if (filter == ''){
+                document.getElementById('myUL').style.display = 'none';
+            } else {
+                document.getElementById('myUL').style.display = 'block';
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+                } else {
+                li[i].style.display = "none";
+                }
+            }
+        }
+    }
     </script>
 </head>
 <body>
@@ -49,20 +81,40 @@
                 </div>
             </div>
         </div>
-        <input spellcheck="false" type="text" id="formulainput" placeholder="Type your formula...">
-        <div class="flex-parent jc-center">
-            <button class="specchar" id="exponentbutton">x²</button>
-            <button class="specchar" id="lambdabutton">λ</button>
-            <button class="specchar" id="omegabutton">Ω</button>
-            <button class="specchar" id="deltabutton">Δ</button>
-            <button class="specchar" id="thetabutton">θ</button>
-            <button class="specchar" id="pibutton">π</button>
+        <div class="inputs">
+            <h2>Search for a formula:</h2>
+            <div class="flex-parent jc-center">
+                <button class="specchar" id="exponentbutton">x²</button>
+                <button class="specchar" id="lambdabutton">λ</button>
+                <button class="specchar" id="omegabutton">Ω</button>
+                <button class="specchar" id="deltabutton">Δ</button>
+                <button class="specchar" id="thetabutton">θ</button>
+                <button class="specchar" id="pibutton">π</button>
+            </div>
+            <input type="text" id="input1" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+            <ul id="myUL">
+            <li><a href="/db/acceleration-velocity-time.html">Acceleration, Velocity, Time</a></li>
+            <li><a href="#">Displacement, Velocity, Time, Acceleration</a></li>
+            <li><a href="#">Distance, Displacement, Time</a></li>
+            <li><a href="#">Electrical-Force, K, Particle-Charge</a></li>
+            <li><a href="#">Force, Mass, Acceleration</a></li>
+            <li><a href="#">Force, Time, Momentum</a></li>
+            <li><a href="#">Gravitational-Force, Gravity, Mass-Change, Distance</a></li>
+            <li><a href="#">Gravitational-Force, Mass, Gravity</a></li>
+            <li><a href="#">Heat, Mass, Specific-Heat, Time</a></li>
+            <li><a href="#">Kinetic-Energy, Mass, Velocity</a></li>
+            <li><a href="#">Momentum, Mass, Velocity</a></li>
+            <li><a href="#">Period, Frequency</a></li>
+            <li><a href="#">Potential-Energy, Mass, Gravity, Height</a></li>
+            <li><a href="#">Velocity, Acceleration, Time</a></li>
+            <li><a href="#">Velocity, Displacement, Time</a></li>
+            <li><a href="#">Velocity, Wavelength, Frequency</a></li>
+            <li><a href="#">Voltage, Current, Resistance</a></li>
+            <li><a href="#">Work, Force, Distance</a></li>
+            </ul>
         </div>
         <button id="formulasearch">Search</button>
-        <div id="resultdiv">
-            <h2 id="formulareturn"><span>Your formula will appear here.</span></h2>
-            <p id="formulainforeturn">Information about your fomula will appear here.</p>
-        </div>
         <div class="textbox">
             <h1><u>What is <span>PhysDB</span>?</u></h1>
             <h2><span>PhysDB</span> is a mini-database of basic physics formulas. </h2>

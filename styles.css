@@ -566,3 +566,26 @@ hr {
 .item3 b{
     font-weight: 400;
 }
+.project{
+    border: 0;
+    border-radius: 15px;
+    color: white;
+    width: 700px;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 3%;
+    text-align: center;
+    background-image: linear-gradient(to right, #ffffff,#7e39ff,#ffffff);
+}
+
+.project ~ .project{
+    margin-top: 2%
+}
+
+.inqOpen{
+    border: 5px solid yellow;
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 5px;
+}
