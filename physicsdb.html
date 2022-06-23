@@ -30,18 +30,19 @@
         }
         
         #myUL li a {
-          border: 1px solid #ddd;
+          border: 1px solid rgb(181, 181, 181);
+          border-radius: 10px;
           margin-top: -1px; /* Prevent double borders */
-          background-color: #f6f6f6;
+          background-color: #474747;
           padding: 12px;
           text-decoration: none;
           font-size: 18px;
-          color: black;
+          color: rgb(255, 255, 255);
           display: block;
         }
         
         #myUL li a:hover:not(.header) {
-          background-color: #eee;
+          background-color: rgb(93, 93, 93);
         }
     </style>
     <title>Physics Database | Mazen Abukhalaf</title>
@@ -82,15 +83,7 @@
             </div>
         </div>
         <div class="inputs">
-            <h2>Search for a formula:</h2>
-            <div class="flex-parent jc-center">
-                <button class="specchar" id="exponentbutton">x²</button>
-                <button class="specchar" id="lambdabutton">λ</button>
-                <button class="specchar" id="omegabutton">Ω</button>
-                <button class="specchar" id="deltabutton">Δ</button>
-                <button class="specchar" id="thetabutton">θ</button>
-                <button class="specchar" id="pibutton">π</button>
-            </div>
+            <h2>Search for variables:</h2>
             <input type="text" id="input1" onkeyup="myFunction()" placeholder="Search.." title="Type in a variable name">
 
             <ul id="myUL">
@@ -114,7 +107,7 @@
             <li><a href="/db/work-force-distance.html">Work, Force, Distance</a></li>
             </ul>
         </div>
-        <button id="formulasearch">Search</button>
+        <!-- <button id="formulasearch">Search</button> -->
         <div class="textbox">
             <h1><u>What is <span>PhysDB</span>?</u></h1>
             <h2><span>PhysDB</span> is a mini-database of basic physics formulas. </h2>
